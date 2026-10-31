@@ -26,6 +26,10 @@ window/stretch/scale_mode="integer"
 
 enabled=PackedStringArray("res://addons/project-time-tracker/plugin.cfg")
 
+[global_group]
+
+CicleTimer=""
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

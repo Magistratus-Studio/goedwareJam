@@ -1,3 +1,27 @@
 [gd_scene format=3 uid="uid://dfamalroopgrd"]
 
-[node name="MainScene" type="Node2D" unique_id=136954521]
+[ext_resource type="Script" uid="uid://b1coh8rvkma4y" path="res://scripts/states/state_machine.gd" id="1_1imvj"]
+[ext_resource type="Script" uid="uid://cdsqpt5q1dqnl" path="res://cenas/main_scene.gd" id="1_6rt3q"]
+[ext_resource type="Script" uid="uid://pt8d0bnhrnek" path="res://scripts/states/state_day.gd" id="2_6rt3q"]
+[ext_resource type="Script" uid="uid://2nf8ulevhsld" path="res://scripts/states/state_night.gd" id="3_wthhn"]
+
+[node name="MainScene" type="Node" unique_id=605569138 node_paths=PackedStringArray("label", "cicleTimer")]
+script = ExtResource("1_6rt3q")
+label = NodePath("Label")
+cicleTimer = NodePath("CicleTimer")
+
+[node name="StateMachine" type="Node" parent="." unique_id=1368665619 node_paths=PackedStringArray("initialState")]
+script = ExtResource("1_1imvj")
+initialState = NodePath("Day")
+
+[node name="Day" type="Node" parent="StateMachine" unique_id=937280500]
+script = ExtResource("2_6rt3q")
+
+[node name="Night" type="Node" parent="StateMachine" unique_id=1741522271]
+script = ExtResource("3_wthhn")
+
+[node name="CicleTimer" type="Timer" parent="." unique_id=29996632 groups=["CicleTimer"]]
+
+[node name="Label" type="Label" parent="." unique_id=1920688757]
+offset_right = 40.0
+offset_bottom = 23.0
