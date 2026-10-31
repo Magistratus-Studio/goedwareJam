@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://jj2rgvx3uc6l"]
+
+[ext_resource type="Script" uid="uid://doqtlmjjlya2y" path="res://cenas/menu_inicial.gd" id="1_pr5wd"]
+[ext_resource type="PackedScene" uid="uid://dfamalroopgrd" path="res://cenas/mainScene.tscn" id="2_phehi"]
+[ext_resource type="Theme" uid="uid://dxkuqsjkslq7x" path="res://assets/menuButtonTheme.tres" id="3_qqkno"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_otrat"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="MenuInicial" type="Control" unique_id=1196316007]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pr5wd")
+mainScene = ExtResource("2_phehi")
+
+[node name="Fundo" type="ColorRect" parent="." unique_id=656736246]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1179309624]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.128
+offset_bottom = -0.040000916
+grow_horizontal = 2
+text = "Titulo"
+label_settings = SubResource("LabelSettings_otrat")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=1117118460]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="StartButton" type="Button" parent="HBoxContainer" unique_id=351493539]
+layout_mode = 2
+theme = ExtResource("3_qqkno")
+text = "Start"
+
+[node name="ConfigButton" type="Button" parent="HBoxContainer" unique_id=586312924]
+layout_mode = 2
+text = "Configuration"
+
+[node name="ExitButton" type="Button" parent="HBoxContainer" unique_id=1054946140]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="HBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ConfigButton" to="." method="_on_config_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
