@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
 
 var cardinalDirection: Vector2 = Vector2.ZERO
 var direction: Vector2 = Vector2.ZERO
@@ -12,8 +11,6 @@ var state: String = "idle"
 @onready var sprite: Sprite2D = $Sprite2D
 
 func _physics_process(_delta: float) -> void:
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	direction.x = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction.x * SPEED
@@ -24,6 +21,7 @@ func _physics_process(_delta: float) -> void:
 		updateAnimation()
 	
 	move_and_slide()
+	clamp(position.x, Globals.curretMapLimits.y, Globals.curretMapLimits.y)
 
 func setDirection() -> bool:
 	var newDir: Vector2 = cardinalDirection

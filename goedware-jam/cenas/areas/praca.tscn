@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b1brwg3lrtt7m"]
+
+[ext_resource type="Texture2D" uid="uid://cmqf76k0hylxi" path="res://icon.svg" id="1_4vxli"]
+[ext_resource type="Script" uid="uid://cmk0fd8s3kr0w" path="res://scripts/area.gd" id="1_u1u3j"]
+[ext_resource type="PackedScene" uid="uid://cf4s5vqcy8vn" path="res://objects/areaLimit.tscn" id="3_6whto"]
+
+[node name="Praca" type="Node2D" unique_id=760885210 groups=["areas"]]
+script = ExtResource("1_u1u3j")
+metadata/limits = Vector2(-500, 1000)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=2146468413]
+position = Vector2(424, 384)
+texture = ExtResource("1_4vxli")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1078887202]
+position = Vector2(768, 392)
+texture = ExtResource("1_4vxli")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=2059179703]
+position = Vector2(-296, 408)
+texture = ExtResource("1_4vxli")
+
+[node name="AreaLimitRight" parent="." unique_id=2008818771 instance=ExtResource("3_6whto")]
+
+[node name="AreaLimitLeft" parent="." unique_id=642957551 instance=ExtResource("3_6whto")]
+scale = Vector2(-1, 1)
