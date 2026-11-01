@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://pt8d0bnhrnek" path="res://scripts/states/state_day.gd" id="2_6rt3q"]
 [ext_resource type="Script" uid="uid://2nf8ulevhsld" path="res://scripts/states/state_night.gd" id="3_wthhn"]
 [ext_resource type="PackedScene" uid="uid://bfs1aybaravrw" path="res://objects/player.tscn" id="5_wthhn"]
+[ext_resource type="Texture2D" uid="uid://cmqf76k0hylxi" path="res://icon.svg" id="6_d3vd7"]
 
 [node name="MainScene" type="Node" unique_id=605569138 node_paths=PackedStringArray("label", "cicleTimer")]
 script = ExtResource("1_6rt3q")
@@ -29,3 +30,7 @@ offset_bottom = 23.0
 
 [node name="Player" parent="." unique_id=496783852 instance=ExtResource("5_wthhn")]
 position = Vector2(248, 384)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1865206451]
+position = Vector2(688, 416)
+texture = ExtResource("6_d3vd7")
