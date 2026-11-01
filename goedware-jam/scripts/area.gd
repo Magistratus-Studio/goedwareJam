@@ -1,8 +1,13 @@
 class_name Area 
 extends Node2D
 
+func _enter_tree() -> void:
+	if PlayerController.player:
+		PlayerController.setParent(self)
+
 func _ready() -> void:
-	Globals.changeMapLimits(getLimits())
+	y_sort_enabled = true
+	AreaLimitController.changeMapLimits(getLimits())
 	
 	var worldBorders: Array[StaticBody2D] = []
 	for child in get_children():

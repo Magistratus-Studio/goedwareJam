@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://uqy563gpdx8k"]
+
+[ext_resource type="Script" uid="uid://cmk0fd8s3kr0w" path="res://scripts/area.gd" id="1_lplx0"]
+[ext_resource type="PackedScene" uid="uid://cf4s5vqcy8vn" path="res://objects/areaLimit.tscn" id="3_bdxg3"]
+
+[node name="Floresta2" type="Node2D" unique_id=760885210 groups=["areas"]]
+script = ExtResource("1_lplx0")
+metadata/limits = Vector2(0, 640)
+
+[node name="AreaLimitRight" parent="." unique_id=2008818771 instance=ExtResource("3_bdxg3")]
+
+[node name="AreaLimitLeft" parent="." unique_id=642957551 instance=ExtResource("3_bdxg3")]
+scale = Vector2(-1, 1)
+
+[node name="Label" type="Label" parent="." unique_id=263055658]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Floresta 2"

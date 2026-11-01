@@ -17,7 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*uid://b3d72tmjkb7qm"
+AreaLimitController="*uid://b3d72tmjkb7qm"
+PlayerController="*uid://c3u0223yf4p7j"
+SceneTransition="*uid://clbgp1ptmcgur"
 
 [display]
 

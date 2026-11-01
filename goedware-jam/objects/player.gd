@@ -1,3 +1,4 @@
+class_name Player 
 extends CharacterBody2D
 
 
@@ -21,7 +22,7 @@ func _physics_process(_delta: float) -> void:
 		updateAnimation()
 	
 	move_and_slide()
-	clamp(position.x, Globals.curretMapLimits.y, Globals.curretMapLimits.y)
+	clamp(position.x, AreaLimitController.curretMapLimits.y, AreaLimitController.curretMapLimits.y)
 
 func setDirection() -> bool:
 	var newDir: Vector2 = cardinalDirection

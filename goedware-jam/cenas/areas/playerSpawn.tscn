@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1v5mkdyaw07i"]
+
+[ext_resource type="Texture2D" uid="uid://dqr7n008r4t8w" path="res://assets/tilemap.png" id="1_c1ckh"]
+[ext_resource type="Script" uid="uid://dxdcitlapj36l" path="res://cenas/areas/player_spawn.gd" id="1_dtsiw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtsiw"]
+atlas = ExtResource("1_c1ckh")
+region = Rect2(0, 68, 50, 16)
+
+[node name="PlayerSpawn" type="Node2D" unique_id=693005256]
+script = ExtResource("1_dtsiw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1467123353]
+modulate = Color(1, 0.47058824, 0, 0.57254905)
+texture = SubResource("AtlasTexture_dtsiw")
+hframes = 3
+region_rect = Rect2(0, 1, 16, 16)

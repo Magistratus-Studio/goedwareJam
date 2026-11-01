@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dvkolyav5qrt"]
+
+[ext_resource type="Script" uid="uid://cfgjer2keeas0" path="res://cenas/areas/area_transition.gd" id="1_20hqe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otrat"]
+resource_local_to_scene = true
+size = Vector2(32, 64)
+
+[node name="AreaTransition" type="Area2D" unique_id=783359035]
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_20hqe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1156620277]
+shape = SubResource("RectangleShape2D_otrat")
+debug_color = Color(0.66748655, 0.41426423, 0.776443, 0.41960785)

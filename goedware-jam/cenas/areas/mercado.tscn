@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bqfawtijvnj3p"]
+
+[ext_resource type="Script" uid="uid://cmk0fd8s3kr0w" path="res://scripts/area.gd" id="1_5105e"]
+[ext_resource type="PackedScene" uid="uid://cf4s5vqcy8vn" path="res://objects/areaLimit.tscn" id="3_1gyjn"]
+
+[node name="Mercado" type="Node2D" unique_id=760885210 groups=["areas"]]
+script = ExtResource("1_5105e")
+metadata/limits = Vector2(0, 640)
+
+[node name="AreaLimitRight" parent="." unique_id=2008818771 instance=ExtResource("3_1gyjn")]
+
+[node name="AreaLimitLeft" parent="." unique_id=642957551 instance=ExtResource("3_1gyjn")]
+scale = Vector2(-1, 1)
+
+[node name="Label" type="Label" parent="." unique_id=749883360]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Mercado"

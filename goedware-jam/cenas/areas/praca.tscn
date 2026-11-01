@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cmqf76k0hylxi" path="res://icon.svg" id="1_4vxli"]
 [ext_resource type="Script" uid="uid://cmk0fd8s3kr0w" path="res://scripts/area.gd" id="1_u1u3j"]
 [ext_resource type="PackedScene" uid="uid://cf4s5vqcy8vn" path="res://objects/areaLimit.tscn" id="3_6whto"]
+[ext_resource type="PackedScene" uid="uid://dvkolyav5qrt" path="res://cenas/areas/areaTransition.tscn" id="4_xf63h"]
+[ext_resource type="PackedScene" uid="uid://c1v5mkdyaw07i" path="res://cenas/areas/playerSpawn.tscn" id="5_lgl2q"]
 
 [node name="Praca" type="Node2D" unique_id=760885210 groups=["areas"]]
 script = ExtResource("1_u1u3j")
@@ -21,6 +23,20 @@ position = Vector2(-296, 408)
 texture = ExtResource("1_4vxli")
 
 [node name="AreaLimitRight" parent="." unique_id=2008818771 instance=ExtResource("3_6whto")]
+position = Vector2(1004, 384)
 
 [node name="AreaLimitLeft" parent="." unique_id=642957551 instance=ExtResource("3_6whto")]
+position = Vector2(-496, 384)
 scale = Vector2(-1, 1)
+
+[node name="AreaTransition" parent="." unique_id=783359035 instance=ExtResource("4_xf63h")]
+position = Vector2(920, 384)
+level = "uid://doqj5w4ot7lwd"
+side = 1
+
+[node name="AreaTransition2" parent="." unique_id=1292975405 instance=ExtResource("4_xf63h")]
+position = Vector2(-424, 384)
+level = "uid://crvbb1255pl4l"
+
+[node name="PlayerSpawn" parent="." unique_id=693005256 instance=ExtResource("5_lgl2q")]
+position = Vector2(848, 384)

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://crvbb1255pl4l"]
+
+[ext_resource type="Script" uid="uid://cmk0fd8s3kr0w" path="res://scripts/area.gd" id="1_rv7pj"]
+[ext_resource type="PackedScene" uid="uid://cf4s5vqcy8vn" path="res://objects/areaLimit.tscn" id="3_04s8c"]
+[ext_resource type="PackedScene" uid="uid://dvkolyav5qrt" path="res://cenas/areas/areaTransition.tscn" id="3_rv7pj"]
+
+[node name="EntradaFloresta" type="Node2D" unique_id=760885210 groups=["areas"]]
+script = ExtResource("1_rv7pj")
+metadata/limits = Vector2(0, 640)
+
+[node name="AreaLimitRight" parent="." unique_id=2008818771 instance=ExtResource("3_04s8c")]
+
+[node name="AreaLimitLeft" parent="." unique_id=642957551 instance=ExtResource("3_04s8c")]
+scale = Vector2(-1, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1185076900]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Entrada Floresta"
+
+[node name="AreaTransition" parent="." unique_id=783359035 instance=ExtResource("3_rv7pj")]
+position = Vector2(593, 384)
+level = "uid://b1brwg3lrtt7m"
+targetTransitionArea = "AreaTransition2"
+side = 1

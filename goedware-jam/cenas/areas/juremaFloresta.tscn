@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://doe14o1x47qne"]
+
+[ext_resource type="Script" uid="uid://cmk0fd8s3kr0w" path="res://scripts/area.gd" id="1_tru2j"]
+[ext_resource type="PackedScene" uid="uid://cf4s5vqcy8vn" path="res://objects/areaLimit.tscn" id="3_wbnj4"]
+
+[node name="JuremaFloresta" type="Node2D" unique_id=760885210 groups=["areas"]]
+script = ExtResource("1_tru2j")
+metadata/limits = Vector2(0, 640)
+
+[node name="AreaLimitRight" parent="." unique_id=2008818771 instance=ExtResource("3_wbnj4")]
+
+[node name="AreaLimitLeft" parent="." unique_id=642957551 instance=ExtResource("3_wbnj4")]
+scale = Vector2(-1, 1)
+
+[node name="Label" type="Label" parent="." unique_id=70336019]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Jurema"
