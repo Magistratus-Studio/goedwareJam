@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cdsqpt5q1dqnl" path="res://cenas/main_scene.gd" id="1_6rt3q"]
 [ext_resource type="Script" uid="uid://pt8d0bnhrnek" path="res://scripts/states/state_day.gd" id="2_6rt3q"]
 [ext_resource type="Script" uid="uid://2nf8ulevhsld" path="res://scripts/states/state_night.gd" id="3_wthhn"]
+[ext_resource type="PackedScene" uid="uid://bfs1aybaravrw" path="res://objects/player.tscn" id="5_wthhn"]
 
 [node name="MainScene" type="Node" unique_id=605569138 node_paths=PackedStringArray("label", "cicleTimer")]
 script = ExtResource("1_6rt3q")
@@ -25,3 +26,6 @@ script = ExtResource("3_wthhn")
 [node name="Label" type="Label" parent="." unique_id=1920688757]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Player" parent="." unique_id=496783852 instance=ExtResource("5_wthhn")]
+position = Vector2(248, 384)
