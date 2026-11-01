@@ -24,6 +24,7 @@ script = ExtResource("3_wthhn")
 [node name="CicleTimer" type="Timer" parent="." unique_id=29996632 groups=["CicleTimer"]]
 
 [node name="Label" type="Label" parent="." unique_id=1920688757]
+visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 
