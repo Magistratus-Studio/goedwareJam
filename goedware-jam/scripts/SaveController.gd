@@ -11,12 +11,12 @@ var is_restoring_save: bool = false
 var currentSave: Dictionary = {
 	scenePath = "",
 	player = {
+		items = [],
 		posX = 0,
 		posY = 0
 	},
 	period = null,
 	cooldown = 0,
-	items = [],
 	persistence = [],
 	quests = []
 }
@@ -52,6 +52,8 @@ func applySaveData() -> void:
 	
 	var playerPos: Vector2 = Vector2(currentSave.player.posX, currentSave.player.posY)
 	PlayerController.setPlayerPos(playerPos)
+	var items: Array = currentSave.player.items
+	PlayerController.PLAYER_INVENTORY.loadSaveData(items)
 	
 	await AreaLimitController.areaLoaded
 	
@@ -66,8 +68,10 @@ func updateSaveData() -> void:
 
 func updatePlayerData() -> void:
 	var p: Player = PlayerController.player
+	var items: Array = PlayerController.PLAYER_INVENTORY.getSaveData()
 	currentSave.player.posX = p.global_position.x
 	currentSave.player.posY = p.global_position.y
+	currentSave.player.items = items
 
 func updateScenePath() -> void:
 	var path: String = ""
