@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ctb4m5lmm0m78"]
+
+[ext_resource type="Script" uid="uid://b7leqbp7ok03s" path="res://objects/items/item_data.gd" id="1_74sp8"]
+[ext_resource type="Texture2D" uid="uid://cxnl06xi1k2tx" path="res://assets/tilemapCursor.png" id="2_pe0ja"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we4if"]
+atlas = ExtResource("2_pe0ja")
+region = Rect2(136, 102, 16, 16)
+
+[resource]
+script = ExtResource("1_74sp8")
+name = "ITEM_TABACCO"
+description = "ITEM_DESCRIPTION_TABACCO"
+texture = SubResource("AtlasTexture_we4if")
+metadata/_custom_type_script = "uid://b7leqbp7ok03s"

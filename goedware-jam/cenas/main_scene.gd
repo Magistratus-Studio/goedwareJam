@@ -4,6 +4,7 @@ func _enter_tree() -> void:
 	if SaveController.is_loading_from_menu:
 		hide()
 	PlayerController.addPlayerInstance()
+	PlayerHud.show()
 
 func _ready() -> void:
 	await get_tree().process_frame
@@ -17,3 +18,4 @@ func _ready() -> void:
 
 func _exit_tree() -> void:
 	PlayerController.removePlayerInstance()
+	PlayerHud.hide()

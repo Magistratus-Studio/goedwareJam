@@ -4,12 +4,11 @@ extends CanvasLayer
 @onready var cooldown_bar: ProgressBar = $Control/CooldownBar
 @onready var cooldown_label: Label = $Control/CooldownBar/CooldownLabel
 
-
-
 @export var head_offset_y: float = -40.0
 @export var screen_margin: float = 8.0
 
 func _ready() -> void:
+	hide()
 	hidePrompt()
 	AreaLimitController.areaLoadStarted.connect(hidePrompt)
 

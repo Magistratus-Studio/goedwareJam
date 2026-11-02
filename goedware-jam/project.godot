@@ -40,6 +40,7 @@ enabled=PackedStringArray("res://addons/coldrock-csv/plugin.cfg", "res://addons/
 
 CicleTimer=""
 areas=""
+itemTexts=""
 
 [input]
 

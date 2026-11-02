@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://300l55ae8enh"]
+
+[ext_resource type="Script" uid="uid://dn8qvbk5s8nsa" path="res://gui/pause_menu/inventory_slot.gd" id="1_11iav"]
+[ext_resource type="Texture2D" uid="uid://dq6xasme28xaa" path="res://assets/panel-transparent-center-013.png" id="1_dj74n"]
+[ext_resource type="Texture2D" uid="uid://cxnl06xi1k2tx" path="res://assets/tilemapCursor.png" id="1_ydeid"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_otrat"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+texture = ExtResource("1_dj74n")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otrat"]
+atlas = ExtResource("1_ydeid")
+region = Rect2(0, 0, 16, 16)
+
+[node name="InventorySlot" type="PanelContainer" unique_id=308517885]
+custom_minimum_size = Vector2(48, 48)
+offset_right = 48.0
+offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_otrat")
+script = ExtResource("1_11iav")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=176610196]
+layout_mode = 2
+texture = SubResource("AtlasTexture_otrat")

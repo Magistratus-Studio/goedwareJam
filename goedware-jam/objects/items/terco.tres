@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bj6are8simtoo"]
+
+[ext_resource type="Script" uid="uid://b7leqbp7ok03s" path="res://objects/items/item_data.gd" id="1_ywiyv"]
+[ext_resource type="Texture2D" uid="uid://cxnl06xi1k2tx" path="res://assets/tilemapCursor.png" id="2_k8d1v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8au0"]
+atlas = ExtResource("2_k8d1v")
+region = Rect2(238, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_ywiyv")
+name = "ITEM_CHAPLET"
+description = "ITEM_DESCRIPTION_CHAPLET"
+texture = SubResource("AtlasTexture_n8au0")
+metadata/_custom_type_script = "uid://b7leqbp7ok03s"
