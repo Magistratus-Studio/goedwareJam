@@ -3,8 +3,6 @@ extends Node
 
 signal transitioned(state: State, newStateName: String)
 
-@onready var cicleTimer: Timer = get_tree().get_first_node_in_group("CicleTimer")
-
 func _ready() -> void:
 	pass
 

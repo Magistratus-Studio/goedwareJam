@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bmhi4jg05kedg"]
+
+[ext_resource type="Script" uid="uid://douk73qqadvsi" path="res://objects/cama.gd" id="1_07scf"]
+[ext_resource type="Texture2D" uid="uid://5qdh7pd6nxpm" path="res://assets/foto-quadrada-site-2024-07-24t103517-565.webp" id="1_ot7ib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otrat"]
+size = Vector2(64, 64)
+
+[node name="Cama" type="Area2D" unique_id=1826359138]
+script = ExtResource("1_07scf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=649460188]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_ot7ib")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1587925321]
+shape = SubResource("RectangleShape2D_otrat")

@@ -6,10 +6,8 @@
 [ext_resource type="Script" uid="uid://2nf8ulevhsld" path="res://scripts/states/state_night.gd" id="3_wthhn"]
 [ext_resource type="PackedScene" uid="uid://b1brwg3lrtt7m" path="res://cenas/areas/praca.tscn" id="6_d3vd7"]
 
-[node name="MainScene" type="Node" unique_id=605569138 node_paths=PackedStringArray("label", "cicleTimer")]
+[node name="MainScene" type="Node" unique_id=605569138]
 script = ExtResource("1_6rt3q")
-label = NodePath("Label")
-cicleTimer = NodePath("CicleTimer")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1368665619 node_paths=PackedStringArray("initialState")]
 script = ExtResource("1_1imvj")
@@ -20,12 +18,5 @@ script = ExtResource("2_6rt3q")
 
 [node name="Night" type="Node" parent="StateMachine" unique_id=1741522271]
 script = ExtResource("3_wthhn")
-
-[node name="CicleTimer" type="Timer" parent="." unique_id=29996632 groups=["CicleTimer"]]
-
-[node name="Label" type="Label" parent="." unique_id=1920688757]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="Praca" parent="." unique_id=760885210 instance=ExtResource("6_d3vd7")]

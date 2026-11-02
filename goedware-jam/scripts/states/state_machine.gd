@@ -13,6 +13,10 @@ func _ready() -> void:
 	if initialState:
 		currentState = initialState
 		currentState.enter()
+		if initialState is StateNight:
+			TimeController.currentPeriod = TimeController.Period.NIGHT
+		else:
+			TimeController.currentPeriod = TimeController.Period.DAY
 
 func _process(delta: float) -> void:
 	if currentState:

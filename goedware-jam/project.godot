@@ -21,6 +21,7 @@ AreaLimitController="*uid://b3d72tmjkb7qm"
 PlayerController="*uid://c3u0223yf4p7j"
 SceneTransition="*uid://clbgp1ptmcgur"
 PlayerHud="*uid://dtaip2ryfph8v"
+TimeController="*uid://b017lbvydhgc4"
 
 [display]
 

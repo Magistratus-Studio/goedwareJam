@@ -1,8 +1,5 @@
 extends Node
 
-@export var label: Label
-@export var cicleTimer: Timer
-
 func _enter_tree() -> void:
 	# Garante que a instância do Player exista antes do _ready() da Area filha e do playerSpawn
 	PlayerController.addPlayerInstance()
@@ -15,6 +12,3 @@ func _ready() -> void:
 func _exit_tree() -> void:
 	# Opcional: limpa o player caso você volte da mainScene para o menuInicial
 	PlayerController.removePlayerInstance()
-
-func _process(_delta: float) -> void:
-	label.text = str("%.2f" % cicleTimer.time_left)

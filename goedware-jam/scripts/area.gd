@@ -1,6 +1,8 @@
 class_name Area 
 extends Node2D
 
+@export var isRiskArea: bool = false
+
 func _enter_tree() -> void:
 	if PlayerController.player:
 		PlayerController.setParent(self)
@@ -8,6 +10,7 @@ func _enter_tree() -> void:
 func _ready() -> void:
 	y_sort_enabled = true
 	AreaLimitController.changeMapLimits(getLimits())
+	TimeController.inRiskArea = isRiskArea
 	
 	var worldBorders: Array[StaticBody2D] = []
 	for child in get_children():

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cmk0fd8s3kr0w" path="res://scripts/area.gd" id="1_a6knm"]
 [ext_resource type="PackedScene" uid="uid://dvkolyav5qrt" path="res://cenas/areas/areaTransition.tscn" id="3_a6knm"]
 [ext_resource type="PackedScene" uid="uid://cf4s5vqcy8vn" path="res://objects/areaLimit.tscn" id="3_tpcm0"]
+[ext_resource type="PackedScene" uid="uid://bmhi4jg05kedg" path="res://objects/cama.tscn" id="4_k0r31"]
 
 [node name="CasaJogador" type="Node2D" unique_id=760885210 groups=["areas"]]
 script = ExtResource("1_a6knm")
@@ -23,3 +24,7 @@ position = Vector2(39, 384)
 level = "uid://b1brwg3lrtt7m"
 targetTransitionArea = "CasaJogador"
 promptText = "INTERECT_ENTER_SQUARE"
+offsetAmount = 32
+
+[node name="Cama" parent="." unique_id=1826359138 instance=ExtResource("4_k0r31")]
+position = Vector2(448, 384)
