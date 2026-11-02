@@ -21,3 +21,6 @@ text = "Cemitério"
 [node name="AreaTransition" parent="." unique_id=783359035 instance=ExtResource("3_owg2r")]
 position = Vector2(61, 384)
 level = "uid://b1brwg3lrtt7m"
+targetTransitionArea = "Cemiterio"
+promptText = "INTERECT_ENTER_SQUARE"
+offsetAmount = 32

@@ -1,5 +1,14 @@
 keys,en,pt_BR
-TITLE,Title,Titulo
-START_BUTTON,Start,Começar
-CONFIG_BUTTON,Options,Configurações
-EXIT_BUTTON,Exit,Sair
+TITLE,"Title","Titulo"
+START_BUTTON,"Start","Começar"
+CONFIG_BUTTON,"Options","Configurações"
+EXIT_BUTTON,"Exit","Sair"
+INTERECT_ENTER_SQUARE,"[F] Go to the square","[F] Ir para praça"
+TEXTO,"Sample Text","Texto Exemplo"
+INTERECT_ENTER_CEMETERY,"[F] Enter the graveyard","[F] Entrar no cemitério"
+INTERECT_ENTER_FOREST_ENTRY,"[F] Go to the forest","[F] Ir para floresta"
+INTERECT_ENTER_FOREST,"[F] Go deeper in the forest","[F] Se apronfudar na floresta"
+INTERECT_ENTER_PLAYER_HOUSE,"[F] Enter your house","[F] Entrar em casa"
+INTERECT_ENTER_OLDMANS_HOUSE,"[F] Enter the old man's house","[F] Entrar na casa do velho"
+INTERECT_ENTER_POLICE_STATION,"[F] Go to the police station","[F] Ir para delegacia"
+INTERECT_ENTER_STORE,"[F] Enter the store","[F] Entrar na mercearia"

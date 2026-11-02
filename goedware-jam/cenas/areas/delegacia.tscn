@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bed3h78jcgxlp"]
 
 [ext_resource type="Script" uid="uid://cmk0fd8s3kr0w" path="res://scripts/area.gd" id="1_5wgtb"]
+[ext_resource type="PackedScene" uid="uid://dvkolyav5qrt" path="res://cenas/areas/areaTransition.tscn" id="3_5wgtb"]
 [ext_resource type="PackedScene" uid="uid://cf4s5vqcy8vn" path="res://objects/areaLimit.tscn" id="3_o56ev"]
 
 [node name="Delegacia" type="Node2D" unique_id=760885210 groups=["areas"]]
@@ -16,3 +17,9 @@ scale = Vector2(-1, 1)
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Delegacia"
+
+[node name="AreaTransition" parent="." unique_id=783359035 instance=ExtResource("3_5wgtb")]
+position = Vector2(39, 384)
+level = "uid://b1brwg3lrtt7m"
+targetTransitionArea = "Delegacia"
+promptText = "INTERECT_ENTER_SQUARE"

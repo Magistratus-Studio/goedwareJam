@@ -11,15 +11,15 @@ script = ExtResource("1_u1u3j")
 metadata/limits = Vector2(-500, 1000)
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=2146468413]
-position = Vector2(424, 384)
+position = Vector2(424, 472)
 texture = ExtResource("1_4vxli")
 
 [node name="Icon2" type="Sprite2D" parent="." unique_id=1078887202]
-position = Vector2(768, 392)
+position = Vector2(728, 319)
 texture = ExtResource("1_4vxli")
 
 [node name="Icon3" type="Sprite2D" parent="." unique_id=2059179703]
-position = Vector2(-296, 408)
+position = Vector2(-296, 184)
 texture = ExtResource("1_4vxli")
 
 [node name="AreaLimitRight" parent="." unique_id=2008818771 instance=ExtResource("3_6whto")]
@@ -29,14 +29,36 @@ position = Vector2(1004, 384)
 position = Vector2(-496, 384)
 scale = Vector2(-1, 1)
 
-[node name="AreaTransition" parent="." unique_id=783359035 instance=ExtResource("4_xf63h")]
+[node name="Cemiterio" parent="." unique_id=783359035 instance=ExtResource("4_xf63h")]
 position = Vector2(920, 384)
 level = "uid://doqj5w4ot7lwd"
+promptText = "INTERECT_ENTER_CEMETERY"
 side = 1
 
-[node name="AreaTransition2" parent="." unique_id=1292975405 instance=ExtResource("4_xf63h")]
+[node name="EntradaFloresta" parent="." unique_id=1292975405 instance=ExtResource("4_xf63h")]
 position = Vector2(-424, 384)
 level = "uid://crvbb1255pl4l"
+promptText = "INTERECT_ENTER_FOREST_ENTRY"
+
+[node name="CasaVelho" parent="." unique_id=17925642 instance=ExtResource("4_xf63h")]
+position = Vector2(328, 384)
+level = "uid://dv2ieo3b085cw"
+promptText = "INTERECT_ENTER_OLDMANS_HOUSE"
+
+[node name="CasaJogador" parent="." unique_id=1692880641 instance=ExtResource("4_xf63h")]
+position = Vector2(560, 384)
+level = "uid://bfpd32w7w7sjx"
+promptText = "INTERECT_ENTER_PLAYER_HOUSE"
+
+[node name="Delegacia" parent="." unique_id=546922841 instance=ExtResource("4_xf63h")]
+position = Vector2(-176, 384)
+level = "uid://bed3h78jcgxlp"
+promptText = "INTERECT_ENTER_POLICE_STATION"
+
+[node name="Mercado" parent="." unique_id=829243281 instance=ExtResource("4_xf63h")]
+position = Vector2(24, 384)
+level = "uid://bqfawtijvnj3p"
+promptText = "INTERECT_ENTER_STORE"
 
 [node name="PlayerSpawn" parent="." unique_id=693005256 instance=ExtResource("5_lgl2q")]
-position = Vector2(848, 384)
+position = Vector2(184, 384)

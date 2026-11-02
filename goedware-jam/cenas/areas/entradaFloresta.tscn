@@ -21,5 +21,7 @@ text = "Entrada Floresta"
 [node name="AreaTransition" parent="." unique_id=783359035 instance=ExtResource("3_rv7pj")]
 position = Vector2(593, 384)
 level = "uid://b1brwg3lrtt7m"
-targetTransitionArea = "AreaTransition2"
+targetTransitionArea = "EntradaFloresta"
+promptText = "INTERECT_ENTER_SQUARE"
+offsetAmount = 32
 side = 1

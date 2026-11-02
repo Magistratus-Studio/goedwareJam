@@ -20,3 +20,6 @@ text = "Casa Jogador"
 
 [node name="AreaTransition" parent="." unique_id=783359035 instance=ExtResource("3_a6knm")]
 position = Vector2(39, 384)
+level = "uid://b1brwg3lrtt7m"
+targetTransitionArea = "CasaJogador"
+promptText = "INTERECT_ENTER_SQUARE"

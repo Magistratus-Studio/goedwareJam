@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dtaip2ryfph8v"]
+
+[ext_resource type="Script" uid="uid://dk8jlohig5dbx" path="res://gui/player_hud.gd" id="1_ki3ao"]
+
+[node name="PlayerHud" type="CanvasLayer" unique_id=1348684075]
+script = ExtResource("1_ki3ao")
+
+[node name="Control" type="Control" parent="." unique_id=203634240]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
+[node name="InteractLabel" type="Label" parent="Control" unique_id=100993365]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+horizontal_alignment = 1
