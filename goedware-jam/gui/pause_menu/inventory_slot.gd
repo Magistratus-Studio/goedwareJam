@@ -13,6 +13,8 @@ func _ready() -> void:
 func setSlotData(value: SlotData) -> void:
 	slotData = value
 	if slotData == null: return
+	if slotData.acquired:
+		modulate = Color(1.0,1.0,1.0,1.0)
 	texture_rect.texture = slotData.itemData.texture
 
 func itemFocused() -> void:
