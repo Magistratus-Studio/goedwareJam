@@ -5,9 +5,12 @@ extends State
 var remaining_cooldown: float = 0.0
 
 func enter() -> void:
-	remaining_cooldown = cooldown_duration
 	TimeController.maxNightCooldown = cooldown_duration
-	TimeController.remainingNightCooldown = remaining_cooldown
+	if not SaveController.is_restoring_save:
+		remaining_cooldown = cooldown_duration
+		TimeController.remainingNightCooldown = remaining_cooldown
+	else:
+		remaining_cooldown = TimeController.remainingNightCooldown
 	TimeController.canChangeToDay = false
 	
 	if not TimeController.periodChanged.is_connected(_onPeriodChanged):

@@ -62,7 +62,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _placePlayer() -> void:
 	if name != AreaLimitController.targetTransition:
 		return
-	PlayerController. setPlayerPos(global_position + AreaLimitController.positionOffset)
+	PlayerController.setPlayerPos(global_position + AreaLimitController.positionOffset)
 
 func getOffset() -> Vector2:
 	var offset = Vector2.ZERO

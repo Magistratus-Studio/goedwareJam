@@ -1,14 +1,19 @@
-extends Node
+extends Node2D
 
 func _enter_tree() -> void:
-	# Garante que a instância do Player exista antes do _ready() da Area filha e do playerSpawn
+	if SaveController.is_loading_from_menu:
+		hide()
 	PlayerController.addPlayerInstance()
 
 func _ready() -> void:
-	# Aguarda um frame para todas as AreaTransition filhas entrarem no await e libera o monitoramento
 	await get_tree().process_frame
-	AreaLimitController.areaLoaded.emit()
+	if SaveController.is_loading_from_menu:
+		SaveController.is_loading_from_menu = false
+		SaveController.applySaveData()
+		await AreaLimitController.areaLoadStarted
+		show()
+	else:
+		AreaLimitController.areaLoaded.emit()
 
 func _exit_tree() -> void:
-	# Opcional: limpa o player caso você volte da mainScene para o menuInicial
 	PlayerController.removePlayerInstance()
