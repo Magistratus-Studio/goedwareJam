@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bwlnc8a8x074p"]
+
+[ext_resource type="Script" uid="uid://dfjm1xklwj5vd" path="res://objects/hideout.gd" id="1_i1gbi"]
+[ext_resource type="Texture2D" uid="uid://dqr7n008r4t8w" path="res://assets/tilemap.png" id="2_1kpue"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4mnnu"]
+
+[node name="Hideout" type="Area2D" unique_id=1437015990]
+collision_layer = 0
+script = ExtResource("1_i1gbi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2004613863]
+texture = ExtResource("2_1kpue")
+hframes = 10
+vframes = 6
+frame = 38
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=818894210]
+shape = SubResource("CapsuleShape2D_4mnnu")

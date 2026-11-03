@@ -12,6 +12,9 @@ var state: String = "idle"
 @onready var sprite: Sprite2D = $Sprite2D
 
 func _physics_process(_delta: float) -> void:
+	if TimeController.is_hidden:
+		return
+	
 	direction.x = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction.x * SPEED

@@ -9,6 +9,7 @@ var currentPeriod: Period = Period.DAY
 var isTransitioning: bool = false
 
 var inRiskArea: bool = false
+var is_hidden: bool = false
 var canChangeToDay: bool = true
 var maxNightCooldown: float = 60.0
 var remainingNightCooldown: float = 0.0

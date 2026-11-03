@@ -18,7 +18,7 @@ func enter() -> void:
 		print("Ficou de noite")
 
 func process_state(delta: float) -> void:
-	if remaining_cooldown > 0.0 and TimeController.inRiskArea:
+	if remaining_cooldown > 0.0 and TimeController.inRiskArea and not TimeController.is_hidden:
 		remaining_cooldown = max(0.0, remaining_cooldown - delta)
 		TimeController.remainingNightCooldown = remaining_cooldown
 		

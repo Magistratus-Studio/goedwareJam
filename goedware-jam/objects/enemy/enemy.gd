@@ -4,12 +4,12 @@ extends CharacterBody2D
 enum STATE { ROAM, CHASE }
 
 @export_category("Movimentação")
-@export var roam_speed: float = 45.0
-@export var chase_speed: float = 85.0
+@export var roam_speed: float = 90.0
+@export var chase_speed: float = 160.0
 
 @export_category("Detecção")
-@export var detection_radius: float = 140.0
-@export var lose_interest_radius: float = 220.0
+@export var detection_radius: float = 300.0
+@export var lose_interest_radius: float = 420.0
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var catch_area: Area2D = $CatchArea
@@ -24,15 +24,18 @@ func _ready() -> void:
 	catch_area.body_entered.connect(_on_catch_area_body_entered)
 
 func _physics_process(delta: float) -> void:
-	if is_catching_player or not is_instance_valid(PlayerController.player):
+	if is_catching_player or not is_instance_valid(PlayerController.player) and not TimeController.is_hidden:
 		velocity = Vector2.ZERO
 		return
+	
 	
 	var player_x: float = PlayerController.player.global_position.x
 	var distance_x: float = absf(player_x - global_position.x)
 	
 	# Transição de estados usando apenas a distância horizontal
-	if current_STATE == STATE.ROAM and distance_x <= detection_radius:
+	if TimeController.is_hidden:
+		current_STATE = STATE.ROAM
+	elif current_STATE == STATE.ROAM and distance_x <= detection_radius:
 		current_STATE = STATE.CHASE
 	elif current_STATE == STATE.CHASE and distance_x >= lose_interest_radius:
 		current_STATE = STATE.ROAM

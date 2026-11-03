@@ -24,7 +24,7 @@ const PLAYER_INVENTORY: InventoryData = preload("res://gui/pause_menu/playerInve
 		sprite_frame = max(0, value)
 		_update_sprite()
 
-@export var prompt_text: String = "[E] Conversar"
+@export var prompt_text: String = "HUD_TALK"
 @export var face_player_on_talk: bool = true
 @export var npc_csv_id: String = ""
 
@@ -43,6 +43,9 @@ const PLAYER_INVENTORY: InventoryData = preload("res://gui/pause_menu/playerInve
 @export var required_items: Array[ItemData] = []
 @export_multiline var item_dialog: Array[String] = []
 @export var item_dialog_only_at_night: bool = false
+
+@export_category("Regras de Aparecimento Noturno")
+@export var disappear_at_night: bool = false
 
 @onready var sprite: Sprite2D = $Sprite2D
 
@@ -64,6 +67,30 @@ func _ready() -> void:
 	set_process_unhandled_input(false)
 	body_entered.connect(_on_player_entered)
 	body_exited.connect(_on_player_exited)
+	_check_night_presence()
+
+func _process(_delta: float) -> void:
+	if Engine.is_editor_hint():
+		return
+	# Checagem contínua simples e segura para garantir que o NPC suma assim que virar noite
+	_check_night_presence()
+
+func _check_night_presence() -> void:
+	# Se a flag estiver desativada, o NPC nunca some à noite
+	if not disappear_at_night:
+		_set_npc_visible(true)
+		return
+	
+	# Se a flag estiver ativada, esconde o NPC e bloqueia a interação durante a noite
+	if TimeController.isNight():
+		_set_npc_visible(false)
+	else:
+		_set_npc_visible(true)
+
+func _set_npc_visible(is_vis: bool) -> void:
+	visible = is_vis
+	# Desliga o monitoramento da Area2D para impedir que o player interaja ou ative o prompt na HUD
+	set_deferred("monitoring", is_vis)
 
 func _get_csv_sequence(dialog_type: String) -> Array[String]:
 	var result: Array[String] = []

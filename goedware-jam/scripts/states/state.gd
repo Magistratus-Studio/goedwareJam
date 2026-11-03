@@ -9,10 +9,10 @@ func _ready() -> void:
 func enter() -> void:
 	pass
 
-func process_state(delta: float) -> void:
+func process_state(_delta: float) -> void:
 	pass
 
-func physics_process_state(delta: float) -> void:
+func physics_process_state(_delta: float) -> void:
 	pass
 
 func exit() -> void:
