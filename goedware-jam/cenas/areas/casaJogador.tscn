@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bmhi4jg05kedg" path="res://objects/cama.tscn" id="4_k0r31"]
 [ext_resource type="PackedScene" uid="uid://dgl80xe8dbmfa" path="res://objects/items/itemPickup.tscn" id="5_tpcm0"]
 [ext_resource type="Resource" uid="uid://cq0mpv2xxegsp" path="res://objects/items/documentos.tres" id="6_c7mxi"]
+[ext_resource type="PackedScene" uid="uid://c1v5mkdyaw07i" path="res://cenas/areas/playerSpawn.tscn" id="7_s5mym"]
 
 [node name="CasaJogador" type="Node2D" unique_id=760885210 groups=["areas"]]
 script = ExtResource("1_a6knm")
@@ -26,7 +27,6 @@ position = Vector2(39, 384)
 level = "uid://b1brwg3lrtt7m"
 targetTransitionArea = "CasaJogador"
 promptText = "INTERECT_ENTER_SQUARE"
-offsetAmount = 32
 
 [node name="Cama" parent="." unique_id=1826359138 instance=ExtResource("4_k0r31")]
 position = Vector2(448, 384)
@@ -34,3 +34,6 @@ position = Vector2(448, 384)
 [node name="ItemPickup" parent="." unique_id=1965433821 instance=ExtResource("5_tpcm0")]
 position = Vector2(286, 384)
 itemData = ExtResource("6_c7mxi")
+
+[node name="PlayerSpawn" parent="." unique_id=693005256 instance=ExtResource("7_s5mym")]
+position = Vector2(402, 384)
