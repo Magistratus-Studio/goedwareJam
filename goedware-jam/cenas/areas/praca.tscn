@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cf4s5vqcy8vn" path="res://objects/areaLimit.tscn" id="3_6whto"]
 [ext_resource type="PackedScene" uid="uid://dvkolyav5qrt" path="res://cenas/areas/areaTransition.tscn" id="4_xf63h"]
 [ext_resource type="PackedScene" uid="uid://c1v5mkdyaw07i" path="res://cenas/areas/playerSpawn.tscn" id="5_lgl2q"]
+[ext_resource type="PackedScene" uid="uid://canrxh87lbm8l" path="res://npc/npc.tscn" id="6_m8fyq"]
+[ext_resource type="Texture2D" uid="uid://dqr7n008r4t8w" path="res://assets/tilemap.png" id="7_vdud6"]
 
 [node name="Praca" type="Node2D" unique_id=760885210 groups=["areas"]]
 script = ExtResource("1_u1u3j")
@@ -69,3 +71,11 @@ lockedPeriodText = "LOCKED_MARKET"
 
 [node name="PlayerSpawn" parent="." unique_id=693005256 instance=ExtResource("5_lgl2q")]
 position = Vector2(184, 384)
+
+[node name="Npc" parent="." unique_id=1280807740 instance=ExtResource("6_m8fyq")]
+position = Vector2(-88, 384)
+npc_texture = ExtResource("7_vdud6")
+h_frames = 10
+v_frames = 6
+sprite_frame = 51
+night_dialog = Array[String](["O que você está fazendo fora de casa a essa hora?!", "A floresta fica perigosa durante a noite."])

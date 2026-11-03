@@ -23,6 +23,7 @@ SceneTransition="*uid://clbgp1ptmcgur"
 PlayerHud="*uid://dtaip2ryfph8v"
 TimeController="*uid://b017lbvydhgc4"
 SaveController="*uid://bdvgly680lym6"
+DialogSystem="*uid://d2bplqsieh2bi"
 PauseMenu="*uid://b51051t82slj1"
 
 [display]

@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://d2bplqsieh2bi"]
+
+[ext_resource type="Script" uid="uid://dtrnb1ft6dtb3" path="res://gui/dialog_system/dialog_system.gd" id="1_gle0o"]
+
+[node name="DialogSystem" type="CanvasLayer" unique_id=655987704]
+process_mode = 3
+script = ExtResource("1_gle0o")
+
+[node name="DialogUI" type="Control" parent="." unique_id=1236395418]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogUI" unique_id=182823688]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.8995
+anchor_bottom = 0.39966667
+offset_right = 0.3199997
+offset_bottom = 0.15999603
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogUI/PanelContainer" unique_id=2111914125]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="DialogUI/PanelContainer/VBoxContainer" unique_id=1481937152]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="DialogUI/PanelContainer/VBoxContainer" unique_id=1322698573]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+
+[node name="ProgressIndicator" type="Label" parent="DialogUI" unique_id=286898380]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.33333334
+anchor_right = 0.88699996
+anchor_bottom = 0.38133335
+offset_right = 0.3199997
+offset_bottom = -0.040000916
+text = "CONTINUE_DIALOG"
+horizontal_alignment = 2
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1643000767]
+one_shot = true

@@ -27,6 +27,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		if get_tree().current_scene.name != "MainScene":
 			return
 		
+		if DialogSystem.is_active:
+			return
+		
 		get_viewport().set_input_as_handled()
 		if not isPaused:
 			showPauseMenu()
