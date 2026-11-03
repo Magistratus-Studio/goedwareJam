@@ -1,30 +1,136 @@
-[gd_scene format=3 uid="uid://b1brwg3lrtt7m"]
+[gd_scene format=4 uid="uid://b1brwg3lrtt7m"]
 
-[ext_resource type="Texture2D" uid="uid://cmqf76k0hylxi" path="res://icon.svg" id="1_4vxli"]
 [ext_resource type="Script" uid="uid://cmk0fd8s3kr0w" path="res://scripts/area.gd" id="1_u1u3j"]
+[ext_resource type="Texture2D" uid="uid://dd8lrtmwft3yy" path="res://assets/Tilemap_Praça.png" id="2_vdud6"]
 [ext_resource type="PackedScene" uid="uid://cf4s5vqcy8vn" path="res://objects/areaLimit.tscn" id="3_6whto"]
 [ext_resource type="PackedScene" uid="uid://dvkolyav5qrt" path="res://cenas/areas/areaTransition.tscn" id="4_xf63h"]
 [ext_resource type="PackedScene" uid="uid://c1v5mkdyaw07i" path="res://cenas/areas/playerSpawn.tscn" id="5_lgl2q"]
 [ext_resource type="PackedScene" uid="uid://canrxh87lbm8l" path="res://npc/npc.tscn" id="6_m8fyq"]
-[ext_resource type="Texture2D" uid="uid://dqr7n008r4t8w" path="res://assets/tilemap.png" id="7_vdud6"]
+[ext_resource type="Texture2D" uid="uid://bc1o2dsdb05hc" path="res://assets/Npc_1.png" id="7_vdud6"]
 [ext_resource type="PackedScene" uid="uid://bwlnc8a8x074p" path="res://objects/hideout.tscn" id="8_vdud6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_22do2"]
+texture = ExtResource("2_vdud6")
+texture_region_size = Vector2i(80, 80)
+10:1/0 = 0
+11:1/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_j65aw"]
+tile_size = Vector2i(80, 80)
+sources/2 = SubResource("TileSetAtlasSource_22do2")
 
 [node name="Praca" type="Node2D" unique_id=760885210 groups=["areas"]]
 script = ExtResource("1_u1u3j")
 isRiskArea = true
 metadata/limits = Vector2(-500, 1000)
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=2146468413]
-position = Vector2(424, 472)
-texture = ExtResource("1_4vxli")
-
-[node name="Icon2" type="Sprite2D" parent="." unique_id=1078887202]
-position = Vector2(728, 319)
-texture = ExtResource("1_4vxli")
-
-[node name="Icon3" type="Sprite2D" parent="." unique_id=2059179703]
-position = Vector2(-296, 184)
-texture = ExtResource("1_4vxli")
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=778860756]
+tile_map_data = PackedByteArray("AAD6/wUAAgACAAgAAAD7/wUAAgADAAgAAAD8/wUAAgAEAAgAAAD9/wUAAgABAAgAAAD+/wUAAgACAAgAAAD//wUAAgADAAgAAAAAAAUAAgAEAAgAAAABAAUAAgAFAAgAAAACAAUAAgAGAAgAAAADAAUAAgAHAAgAAAAEAAUAAgAIAAgAAAAFAAUAAgAJAAgAAAAGAAUAAgAKAAgAAAAHAAUAAgALAAgAAAAIAAUAAgAMAAgAAAAJAAUAAgANAAgAAAAKAAUAAgAOAAgAAAD5/wUAAgABAAgAAAALAAUAAgAPAAgAAAAMAAUAAgAQAAgAAAANAAUAAgARAAgAAAD+/wAAAgABAAMAAAD+/wEAAgABAAQAAAD+/wIAAgABAAUAAAD+/wMAAgABAAYAAAD+/wQAAgABAAcAAAD//wAAAgACAAMAAAD//wEAAgACAAQAAAD//wIAAgACAAUAAAD//wMAAgACAAYAAAD//wQAAgACAAcAAAAAAAAAAgADAAMAAAAAAAEAAgADAAQAAAAAAAIAAgADAAUAAAAAAAMAAgADAAYAAAAAAAQAAgADAAcAAAABAAAAAgAEAAMAAAABAAEAAgAEAAQAAAABAAIAAgAEAAUAAAABAAMAAgAEAAYAAAABAAQAAgAEAAcAAAACAAAAAgAFAAMAAAACAAEAAgAFAAQAAAACAAIAAgAFAAUAAAACAAMAAgAFAAYAAAACAAQAAgAFAAcAAAADAAAAAgAGAAMAAAADAAEAAgAGAAQAAAADAAIAAgAGAAUAAAADAAMAAgAGAAYAAAADAAQAAgAGAAcAAAAEAAAAAgAHAAMAAAAEAAEAAgAHAAQAAAAEAAIAAgAHAAUAAAAEAAMAAgAHAAYAAAAEAAQAAgAHAAcAAAAFAAAAAgAIAAMAAAAFAAEAAgAIAAQAAAAFAAIAAgAIAAUAAAAFAAMAAgAIAAYAAAAFAAQAAgAIAAcAAAAGAAAAAgAJAAMAAAAGAAEAAgAJAAQAAAAGAAIAAgAJAAUAAAAGAAMAAgAJAAYAAAAGAAQAAgAJAAcAAAAHAP7/AgAKAAEAAAAHAP//AgAKAAIAAAAHAAAAAgAKAAMAAAAHAAEAAgAKAAQAAAAHAAIAAgAKAAUAAAAHAAMAAgAKAAYAAAAHAAQAAgAKAAcAAAAIAP7/AgALAAEAAAAIAP//AgALAAIAAAAIAAAAAgALAAMAAAAIAAEAAgALAAQAAAAIAAIAAgALAAUAAAAIAAMAAgALAAYAAAAIAAQAAgALAAcAAAAJAAEAAgAMAAQAAAAJAAIAAgAMAAUAAAAJAAMAAgAMAAYAAAAJAAQAAgAMAAcAAAAKAAAAAgANAAMAAAAKAAEAAgANAAQAAAAKAAIAAgANAAUAAAAKAAMAAgANAAYAAAAKAAQAAgANAAcAAAALAP//AgAOAAIAAAALAAAAAgAOAAMAAAALAAEAAgAOAAQAAAALAAIAAgAOAAUAAAALAAMAAgAOAAYAAAALAAQAAgAOAAcAAAAMAP//AgAPAAIAAAAMAAAAAgAPAAMAAAAMAAEAAgAPAAQAAAAMAAIAAgAPAAUAAAAMAAMAAgAPAAYAAAAMAAQAAgAPAAcAAAANAAAAAgAQAAMAAAANAAEAAgAQAAQAAAANAAIAAgAQAAUAAAANAAMAAgAQAAYAAAANAAQAAgAQAAcAAAAOAAEAAgARAAQAAAAOAAIAAgARAAUAAAAOAAMAAgARAAYAAAAOAAQAAgARAAcAAAAOAAUAAgABAAgAAAAPAAUAAgACAAgAAAAQAAUAAgADAAgAAAARAAUAAgAEAAgAAAASAAUAAgAFAAgAAAATAAUAAgAGAAgAAAAUAAUAAgAHAAgAAAAVAAUAAgAIAAgAAAAWAAUAAgAJAAgAAAAXAAUAAgAKAAgAAAAYAAUAAgALAAgAAAAZAAUAAgAMAAgAAAAaAAUAAgANAAgAAAAbAAUAAgAOAAgAAAAcAAUAAgAPAAgAAAAdAAUAAgAQAAgAAAAeAAUAAgARAAgAAADo/wUAAgABAAgAAADp/wUAAgACAAgAAADq/wUAAgADAAgAAADr/wUAAgAEAAgAAADs/wUAAgAFAAgAAADt/wUAAgAGAAgAAADu/wUAAgAHAAgAAADv/wUAAgAIAAgAAADw/wUAAgAJAAgAAADx/wUAAgAKAAgAAADy/wUAAgALAAgAAADz/wUAAgAMAAgAAAD0/wUAAgANAAgAAAD1/wUAAgAOAAgAAAD2/wUAAgAPAAgAAAD3/wUAAgAQAAgAAAD4/wUAAgARAAgAAAA=")
+tile_set = SubResource("TileSet_j65aw")
 
 [node name="AreaLimitRight" parent="." unique_id=2008818771 instance=ExtResource("3_6whto")]
 position = Vector2(1004, 384)
@@ -76,10 +182,6 @@ position = Vector2(184, 384)
 [node name="Npc" parent="." unique_id=1285779810 instance=ExtResource("6_m8fyq")]
 position = Vector2(264, 384)
 npc_texture = ExtResource("7_vdud6")
-h_frames = 10
-v_frames = 6
-sprite_frame = 52
-npc_csv_id = null
 disappear_at_night = true
 
 [node name="Hideout" parent="." unique_id=1437015990 instance=ExtResource("8_vdud6")]

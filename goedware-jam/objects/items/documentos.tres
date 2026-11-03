@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cq0mpv2xxegsp"]
 
 [ext_resource type="Script" uid="uid://b7leqbp7ok03s" path="res://objects/items/item_data.gd" id="1_w78ku"]
-[ext_resource type="Texture2D" uid="uid://cxnl06xi1k2tx" path="res://assets/tilemapCursor.png" id="2_cm36x"]
+[ext_resource type="Texture2D" uid="uid://gtr7pjjckr23" path="res://assets/itensHud.png" id="2_cm36x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkyfb"]
 atlas = ExtResource("2_cm36x")
-region = Rect2(170, 34, 16, 16)
+region = Rect2(85, 85, 65, 75)
 
 [resource]
 script = ExtResource("1_w78ku")

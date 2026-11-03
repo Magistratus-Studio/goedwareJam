@@ -22,6 +22,7 @@ region = Rect2(0, 0, 16, 16)
 [node name="InventorySlot" type="PanelContainer" unique_id=308517885]
 modulate = Color(0.1749846, 0.17498463, 0.1749846, 1)
 custom_minimum_size = Vector2(48, 48)
+custom_maximum_size = Vector2(48, 48)
 offset_right = 48.0
 offset_bottom = 48.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_otrat")
@@ -30,3 +31,4 @@ script = ExtResource("1_11iav")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=176610196]
 layout_mode = 2
 texture = SubResource("AtlasTexture_otrat")
+stretch_mode = 5
