@@ -34,38 +34,38 @@ scale = Vector2(-1, 1)
 position = Vector2(920, 384)
 level = "uid://doqj5w4ot7lwd"
 promptText = "INTERECT_ENTER_CEMETERY"
-offsetAmount = 32
+allowedPeriod = 2
 side = 1
 
 [node name="EntradaFloresta" parent="." unique_id=1292975405 instance=ExtResource("4_xf63h")]
 position = Vector2(-424, 384)
 level = "uid://crvbb1255pl4l"
 promptText = "INTERECT_ENTER_FOREST_ENTRY"
-offsetAmount = 32
 
 [node name="CasaVelho" parent="." unique_id=17925642 instance=ExtResource("4_xf63h")]
 position = Vector2(328, 384)
 level = "uid://dv2ieo3b085cw"
 promptText = "INTERECT_ENTER_OLDMANS_HOUSE"
-offsetAmount = 32
+allowedPeriod = 1
+lockedPeriodText = "LOCKED_DAY"
 
 [node name="CasaJogador" parent="." unique_id=1692880641 instance=ExtResource("4_xf63h")]
 position = Vector2(560, 384)
 level = "uid://bfpd32w7w7sjx"
 promptText = "INTERECT_ENTER_PLAYER_HOUSE"
-offsetAmount = 32
 
 [node name="Delegacia" parent="." unique_id=546922841 instance=ExtResource("4_xf63h")]
 position = Vector2(-176, 384)
 level = "uid://bed3h78jcgxlp"
 promptText = "INTERECT_ENTER_POLICE_STATION"
-offsetAmount = 32
+allowedPeriod = 2
 
 [node name="Mercado" parent="." unique_id=829243281 instance=ExtResource("4_xf63h")]
 position = Vector2(24, 384)
 level = "uid://bqfawtijvnj3p"
 promptText = "INTERECT_ENTER_STORE"
-offsetAmount = 32
+allowedPeriod = 2
+lockedPeriodText = "LOCKED_MARKET"
 
 [node name="PlayerSpawn" parent="." unique_id=693005256 instance=ExtResource("5_lgl2q")]
 position = Vector2(184, 384)

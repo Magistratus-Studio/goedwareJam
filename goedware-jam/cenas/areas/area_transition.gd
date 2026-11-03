@@ -3,11 +3,19 @@ class_name AreaTransition
 extends Area2D
 
 enum SIDE {LEFT, RIGHT, TOP, BOTTON}
+enum ALLOWED_PERIOD {ANY, DAY_ONLY, NIGHT_ONLY}
+const PLAYER_INVENTORY = preload("uid://cccle2j744hoh")
 
 @export_file("*.tscn") var level
 @export var targetTransitionArea: String = "AreaTransition"
 @export var promptText: String = "INTERACT"
 @export var offsetAmount: int = 32
+
+@export_category("Access Restrictions")
+@export var allowedPeriod: ALLOWED_PERIOD = ALLOWED_PERIOD.ANY
+@export var requiredItems: Array[ItemData] = []
+@export var lockedPeriodText: String = "LOCKED"
+@export var lockedItemsText: String = "MISSING_ITEMS"
 
 @export_category("Collision Area Settings")
 @export var side: SIDE = SIDE.LEFT :
@@ -55,9 +63,38 @@ func _playerExited(body: Node2D) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		get_viewport().set_input_as_handled()
+		
+		if not canEnter():
+			PlayerHud.showPrompt(_getCurrentPrompt())
+			return
+		
 		set_process_unhandled_input(false)
 		PlayerHud.hidePrompt()
 		AreaLimitController.loadNewArea(level, targetTransitionArea, getOffset())
+
+func _isPeriodAllowed() -> bool:
+	match allowedPeriod:
+		ALLOWED_PERIOD.DAY_ONLY:
+			return not TimeController.isNight()
+		ALLOWED_PERIOD.NIGHT_ONLY:
+			return TimeController.isNight()
+		_:
+			return true
+
+func _hasRequiredItems() -> bool:
+	if requiredItems.is_empty():
+		return true
+	return PLAYER_INVENTORY.hasAllItems(requiredItems)
+
+func canEnter() -> bool:
+	return _isPeriodAllowed() and _hasRequiredItems()
+
+func _getCurrentPrompt() -> String:
+	if not _isPeriodAllowed():
+		return lockedPeriodText
+	if not _hasRequiredItems():
+		return lockedItemsText
+	return promptText
 
 func _placePlayer() -> void:
 	if name != AreaLimitController.targetTransition:
