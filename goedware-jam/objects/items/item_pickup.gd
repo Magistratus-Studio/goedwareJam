@@ -5,17 +5,28 @@ extends Node2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 @export var itemData: ItemData : set = _setItemData
+@onready var is_collected: PersistentDataHandler = $IsCollected
+
+var isCollected: bool = false
 
 func _ready() -> void:
 	_updateTexture()
 	if Engine.is_editor_hint():
 		return
 	area_2d.body_entered.connect(_onBodyEnter)
+	is_collected.dataLoaded.connect(setPickUpState)
+	setPickUpState()
+
+func setPickUpState() -> void:
+	isCollected = is_collected.value
+	if isCollected:
+		itemPickUp()
 
 func _onBodyEnter(b) -> void:
 	if b is Player:
 		if PlayerController.PLAYER_INVENTORY.addItem(itemData):
 			itemPickUp()
+			is_collected.setValue()
 
 func itemPickUp() -> void:
 	area_2d.body_entered.disconnect(_onBodyEnter)

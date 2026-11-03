@@ -83,3 +83,11 @@ func updateScenePath() -> void:
 func updateTimeData() -> void:
 	currentSave.period = TimeController.currentPeriod
 	currentSave.cooldown = TimeController.remainingNightCooldown
+
+func addPersistetVelue(value: String) -> void:
+	if not checkPersistetVelue(value):
+		currentSave.persistence.append(value)
+
+func checkPersistetVelue(value: String) -> bool:
+	var p = currentSave.persistence
+	return p.has(value)

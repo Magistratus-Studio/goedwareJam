@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dgl80xe8dbmfa"]
 
 [ext_resource type="Script" uid="uid://clnwdpqpc6p0p" path="res://objects/items/item_pickup.gd" id="1_maf8s"]
+[ext_resource type="PackedScene" uid="uid://d3wxvj8aagfnn" path="res://persistentDataController/persistentDataController.tscn" id="2_oijqx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_otrat"]
 
@@ -13,3 +14,5 @@ script = ExtResource("1_maf8s")
 shape = SubResource("CircleShape2D_otrat")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=425137648]
+
+[node name="IsCollected" parent="." unique_id=223938276 instance=ExtResource("2_oijqx")]
